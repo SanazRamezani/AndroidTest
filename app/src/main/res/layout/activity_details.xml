@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_holder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/colorSecondary"
+        app:theme="@style/ToolbarColoredBackArrow">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/grey_9"
+        android:layout_below="@+id/toolbar">
+
+
+
+        <ImageView
+            android:id="@+id/cover"
+            style="@style/Cover"
+            android:background="@color/colorSecondary" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <com.vansuita.materialabout.views.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="@dimen/profile_picture_size"
+                android:layout_height="@dimen/profile_picture_size"
+                android:layout_gravity="center_horizontal"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_picture" />
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/Name"
+                android:paddingTop="10dp"
+                android:textColor="@android:color/white"
+                android:text="Your Full Name" />
+
+            <TextView
+                android:id="@+id/sub_title"
+                style="@style/SubTitle"
+                android:textColor="@android:color/white"
+                android:text="Just a sub title" />
+
+            <!--<TextView
+                android:id="@+id/brief"
+                style="@style/Brief"
+                android:layout_margin="5dp"
+                android:text="This is as short message saying who you are and what you like to do." />
+-->
+
+
+
+            <LinearLayout
+                android:id="@+id/app_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/social_media_vertical_padding">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:background="@color/grey_9">
+
+
+                    <com.github.aakira.compoundicontextview.CompoundIconTextView
+                        android:id="@+id/age"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Age"
+                        android:textColor="@android:color/white"
+                        android:layout_marginTop="20dp"
+                        android:textSize="18sp"
+                        app:cit_drawableLeft="@drawable/ic_cake_black_24dp"
+                        app:cit_iconColor="@android:color/white"
+                        app:cit_iconHeight="20dp"
+                        app:cit_iconWidth="20dp" />
+
+                    <!--<com.github.aakira.compoundicontextview.CompoundIconTextView
+                        android:id="@+id/hobbies"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Hobbies"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_below="@+id/age"
+                        android:layout_marginTop="20dp"
+                        app:cit_drawableLeft="@drawable/ic_rowing_black_24dp"
+                        app:cit_iconColor="@android:color/white"
+                        app:cit_iconHeight="22dp"
+                        app:cit_iconWidth="22dp" />-->
+
+                    <com.github.aakira.compoundicontextview.CompoundIconTextView
+                        android:id="@+id/email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="4dp"
+                        android:gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:text="Email"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/age"
+                        app:cit_drawableLeft="@drawable/ic_mail_black_24dp"
+                        app:cit_iconColor="@android:color/white"
+                        app:cit_iconHeight="20dp"
+                        app:cit_iconWidth="20dp" />
+
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@android:drawable/ic_dialog_email"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:onClick="onClick"
+            android:layout_margin="10dp"/>
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
