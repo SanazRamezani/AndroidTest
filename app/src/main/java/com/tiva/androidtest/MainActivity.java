@@ -28,7 +28,7 @@ import java.util.Comparator;
 import java.util.List;
 import java.util.Locale;
 
-
+//First Page for Showing images
 public class MainActivity extends AppCompatActivity {
     private Context context;
     private ArrayList<User> users, userDetails;
