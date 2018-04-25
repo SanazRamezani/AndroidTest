@@ -9,6 +9,7 @@ import java.util.List;
 public class UserDetails {
 
     private ArrayList<User> userDetails;
+    private String status;
 
     public List<User> getUserDetails() {
         return userDetails;
@@ -19,4 +20,11 @@ public class UserDetails {
     }
 
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
 }
