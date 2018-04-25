@@ -29,21 +29,21 @@ import de.hdodenhof.circleimageview.CircleImageView;
  */
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterHolder> {
 
-    private ArrayList<User> users;
-    private Context context;
+    private ArrayList<User> mUsers;
+    private Context mContext;
     private OnAdapterItemListener onAdapterItemListener;
 
 
     public UserAdapter(ArrayList<User> users, Context context, OnAdapterItemListener onAdapterItemListener) {
-        this.users = users;
-        this.context = context;
+        this.mUsers = users;
+        this.mContext = context;
         this.onAdapterItemListener = onAdapterItemListener;
 
     }
 
     @Override
     public int getItemCount() {
-        return users.size();
+        return mUsers.size();
     }
 
 
@@ -65,10 +65,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterHol
     @Override
     public void onBindViewHolder(final UserAdapterHolder userAdapterHolder, int i) {
 
-        userAdapterHolder.nameTextView.setText(users.get(i).getName());
-        if (users.get(i).getImage() != null && isOnline()) {
+        userAdapterHolder.nameTextView.setText(mUsers.get(i).getName());
+        if (mUsers.get(i).getImage() != null && isOnline()) {
 
-            Picasso.with(context).load(users.get(i).getImage()).into(userAdapterHolder.imageView, new Callback() {
+            Picasso.with(mContext).load(mUsers.get(i).getImage()).into(userAdapterHolder.imageView, new Callback() {
                 @Override
                 public void onSuccess() {
 
@@ -123,7 +123,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterHol
     }
 
     protected boolean isOnline() {
-        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager cm = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         if (netInfo != null && netInfo.isConnected()) {
             return true;
