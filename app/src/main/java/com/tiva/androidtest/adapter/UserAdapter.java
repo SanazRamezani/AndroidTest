@@ -27,6 +27,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 /**
  * Created by mojtaba on 17/9/29 AD.
  */
+
+
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserAdapterHolder> {
 
     private ArrayList<User> mUsers;
