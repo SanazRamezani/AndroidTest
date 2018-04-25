@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion 26
+    buildToolsVersion "26.0.0"
 
     defaultConfig {
         applicationId "com.tiva.androidtest"
@@ -24,11 +24,11 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:+'
-    compile 'com.android.support:design:+'
-    compile 'com.android.support:cardview-v7:+'
-    compile 'com.android.support:recyclerview-v7:+'
-    compile 'com.squareup.picasso:picasso:+'
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.squareup.picasso:picasso:2.5.0'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.github.aakira:compound-icon-textview:1.1.0@aar'
     compile 'com.github.jrvansuita:MaterialAbout:+'
