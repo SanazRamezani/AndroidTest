@@ -30,6 +30,8 @@ import java.util.ArrayList;
 /**
  * Created by mojtaba on 17/9/29 AD.
  */
+
+//Showning details of each name in this page
 public class DetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Context context;
